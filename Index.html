@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greensweep Cleaning</title>
+
+<style>
+body {
+  margin:0;
+  font-family:Arial;
+  background:#0f172a;
+  color:white;
+  transition: opacity 0.5s ease;
+}
+
+.fade-out {
+  opacity:0;
+}
+
+header {
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  background:#020617;
+}
+
+nav a {
+  color:white;
+  margin-left:15px;
+  text-decoration:none;
+}
+
+.hero {
+  text-align:center;
+  padding:120px 20px;
+}
+
+.btn {
+  padding:12px 25px;
+  background:#22c55e;
+  border:none;
+  cursor:pointer;
+  font-size:16px;
+}
+
+.stats {
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  margin-top:50px;
+}
+
+.stat {
+  text-align:center;
+}
+</style>
+
+<script>
+function go(page){
+  document.body.classList.add("fade-out");
+  setTimeout(()=>{ window.location = page; }, 400);
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+  <h2>Greensweep Cleaning</h2>
+  <nav>
+    <a href="#" onclick="go('index.html')">Home</a>
+    <a href="#" onclick="go('services.html')">Services</a>
+    <a href="#" onclick="go('contact.html')">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Clean Yard. Clean Life.</h1>
+  <p>Fast • Affordable • Professional</p>
+  <button class="btn" onclick="go('services.html')">View Services</button>
+
+  <div class="stats">
+    <div class="stat">
+      <h2>50+</h2>
+      <p>Yards Cleaned</p>
+    </div>
+    <div class="stat">
+      <h2>100%</h2>
+      <p>Happy Clients</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
